@@ -3,12 +3,13 @@ open Core;;
 let command =
         Command.basic
         ~summary:"example with new interface"
-        [%map_open
-          let a = anon ("a" %: int)
+        (let open Command.Let_syntax in
+        let%map_open
+           a = anon ("A" %: int)
           in
-        (fun a  () -> 
-                Printf.printf "a=%d, b=%s\n" a ;)
-        ]
+        fun   () -> 
+                Printf.printf "a=%d\n" a ;
+        )
 ;;
 let () = Command.run ~version:"0.0" ~build_info:"..." command;;
 
