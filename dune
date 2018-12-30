@@ -1,5 +1,5 @@
 (executable
-	(name cliex)
+	(name cliex cliex2)
 	(libraries str core)
 	)
 
