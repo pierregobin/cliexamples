@@ -1,5 +1,5 @@
-(executable
-	(name cliex cliex2)
-	(libraries str core)
+(executables
+	(names cliex cliex2 cliex3)
+	(libraries core )
+	(preprocess (pps ppx_let))
 	)
-
