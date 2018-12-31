@@ -1,5 +1,5 @@
 (executables
-	(names cliex cliex3)
+	(names cliex cliex3 cliex4)
 	(libraries core )
 	(preprocess (pps  ppx_jane ))
 	)

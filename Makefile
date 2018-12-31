@@ -1,17 +1,14 @@
-all : cliex.native cliex2.native cliex3.native
+BUILD=dune build 
+all : cliex.exe cliex3.exe cliex4.exe
 
-cliex.native : cliex.ml
-	corebuild $@
+cliex.exe : cliex.ml
+	$(BUILD) $@
 
-cliex2.native : cliex2.ml
-	corebuild $@
+cliex3.exe : cliex3.ml
+	$(BUILD) $@
 
-cliex3.native : cliex3.ml
-	corebuild $@
+cliex4.exe : cliex4.ml
+	$(BUILD) $@
 
 clean :
 	rm -rf _build
-	rm cliex.native
-	rm cliex2.native
-	rm cliex3.native
-
